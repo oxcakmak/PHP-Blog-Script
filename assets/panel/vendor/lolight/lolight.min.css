@@ -1,0 +1,22 @@
+.ll-nam { /* words */
+    color: #43a047;
+}
+.ll-num { /* numbers */
+    color: #ec407a;
+}
+.ll-str { /* strings */
+    color: #d42424;
+}
+.ll-rex { /* regular expressions */
+    color: #ef6c00;
+}
+.ll-pct { /* operators, punctation */
+    color: #666;
+}
+.ll-key { /* keywords */
+    color: #2196f3;
+}
+.ll-com { /* comments */
+    color: #aaa;
+    font-style: italic;
+}

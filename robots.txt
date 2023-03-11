@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: 
+Disallow: /admin
+Disallow: /assets
+Disallow: /assets/index
+Disallow: /assets/panel
+Disallow: /assets/file
+
+Sitemap: https://oxcakmak.com/sitemap.xml

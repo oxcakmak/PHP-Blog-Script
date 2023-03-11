@@ -1,0 +1,2835 @@
+/*
+Theme Name: Be - Startup Business HTML Template
+Author: Adnan and Tameer
+Author URI: 
+Version: 1.0
+Text Domain: Be
+Tags: one-column, two-columns
+Theme URI:
+*/
+/*------------------------------------------------------------------
+
+1. import files
+2. Global style classes
+3. Global buttons style 
+4. Main heading styles   /   .main-heading
+5. page header styles   /   .page-header
+6. breadcrumbs styles   /  .breadcrumbs
+7. main wrapper styles / #wrapper
+8. Page header styles   /  #header
+9. Page logo styles   /  .logo
+10. Page navigation styles   /  #nav
+11. search popup styles   /  .search-popup
+12. drop sub styles   /  .drop-sub
+13. main banner styles   /  .main-banner
+14. icon box styles   /  .icon-box
+15. portfolio box styles   /  .portfolio-box
+16. isotop filter styles   /  .isotop-filter
+17. testimonial section styles   /  .t-section
+18. post styles   /  .post
+19. Page footer styles   /  #footer
+20. social styles   /  .social
+21. twitter feed styles   /  .twitter-feed
+22. email form styles   /  .email-form
+23. wedo section styles   /  .wedo-section
+24. price box styles   /  .price-box
+25. subscribe form styles   /  .subscribe-form
+26. team box styles   /  .team-box
+27. quote section styles   /  .quote-section
+28. product box styles   /  .product-box
+29. promo block styles   /  .promo-block
+30. progress bar styles   /  .progress-bar
+31. bar outer styles   /  .bar-outer
+32. shop header styles   /  .shop-header
+33. shop pagination styles   /  .shop-pagination
+34. info box styles   /  .info-box
+35. contact form styles   /  .contact-form
+36. section 404 styles   /  .section-404
+37. port slider styles   /  .port-slider
+38. port detail styles   /  .port-detail
+39. search form styles   /  .search-form
+40. widget styles   /  .widget
+41. image slider styles   /  .image-slider
+42. product detail styles   /  .product-detail
+43. product tabsec styles   /  .product-tabsec
+44. related product styles   /  .related-product
+45. blog detail styles   /  .blog-detail
+46. cart block styles   /  .cart-block
+47. billing info styles   /  .billing-info
+48. coming section styles   /  .coming-section
+49. quote form styles   /  .quote-form
+50. bgvid styles   /  #bgvid
+51. back top styles   /  #back-top
+
+-------------------------------------------------------------------*/
+
+// devices viewport width starts at:
+$breakpoints: (
+	xs-phone: 320px,
+	phone: 480px,
+	tablet: 768px,
+	desktop: 1024px,
+	widescreen: 1300px
+);
+ 
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+/*------------------------------------------------------------------
+	1. import files
+-------------------------------------------------------------------*/
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+
+@import "bootstrap-custom";
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/mixins";
+
+@import 'base/mixins';
+@import 'base/helpers';
+@import "base/wp-reset";
+
+
+/*------------------------------------------------------------------
+	2. Global style classes
+-------------------------------------------------------------------*/
+.bg-grey{background-color: $color4;}
+.bg-white{background-color: $white;}
+.bg-dark{background-color: $color5;}
+.bg-grey2{background-color: $color7;}
+.bg-dark2{background-color: $color2;}
+.bg-dark3{background-color: $color6;}
+.visible-xs{display: none !important;}
+.border-top{border-top: 1px solid $color3;}
+.bg-img-full{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.bg-img-parallax{background-attachment: fixed;}
+.bg-overlay{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.8;
+	position: absolute;
+	pointer-events: none;
+	background-color: $color5;
+}
+.margin-zero{margin: 0 !important;}
+.pad-left-z{padding-left: 0 !important;}
+.mar-top-xs{margin-top: 30px !important;}
+.mar-top-sm{margin-top: 60px !important;}
+.mar-top-md{margin-top: 70px !important;}
+.mar-top-lg{margin-top: 90px !important;}
+.pad-top-xs{padding-top: 30px !important;}
+.pad-top-sm{padding-top: 60px !important;}
+.pad-top-md{padding-top: 70px !important;}
+.pad-top-lg{padding-top: 90px !important;}
+.mar-bottom-xs{margin-bottom: 30px !important;}
+.mar-bottom-sm{margin-bottom: 60px !important;}
+.mar-bottom-md{margin-bottom: 70px !important;}
+.pad-bottom-sm{padding-bottom: 60px !important;}
+.pad-bottom-xs{padding-bottom: 30px !important;}
+.pad-bottom-md{padding-bottom: 70px !important;}
+.mar-bottom-lg{margin-bottom: 90px !important;}
+.pad-bottom-lg{padding-bottom: 90px !important;}
+body{
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	&.pattern1{background-image: url(images/patterns/pattern1.png);}
+	&.pattern2{background-image: url(images/patterns/pattern2.png);}
+	&.pattern3{background-image: url(images/patterns/pattern3.png);}
+	&.pattern4{background-image: url(images/patterns/pattern4.png);}
+	&.pattern5{background-image: url(images/patterns/pattern5.png);}
+	&.pattern6{background-image: url(images/patterns/pattern6.png);}
+	&.pattern7{background-image: url(images/patterns/pattern7.png);}
+	&.pattern8{background-image: url(images/patterns/pattern8.png);}
+	&.pattern9{background-image: url(images/patterns/pattern9.png);}
+	&.pattern10{background-image: url(images/patterns/pattern10.png);}
+	&.pattern11{background-image: url(images/patterns/pattern11.png);}
+	&.pattern12{background-image: url(images/patterns/pattern12.png);}
+	&.pattern13{background-image: url(images/patterns/pattern13.png);}
+	&.pattern14{background-image: url(images/patterns/pattern14.png);}
+}
+body.boxed-v #wrapper {
+	max-width: 80%;
+	background: #fff;
+	margin: 20px auto;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+a,
+button,
+.slick-slide{
+	outline: 0 !important;
+	outline-offset: 0 !important;
+}
+/*------------------------------------------------------------------
+	3. Global buttons style 
+-------------------------------------------------------------------*/
+.btn-green{
+	color: $white;
+	padding: 10px 40px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	transition: all ease 0.3s;
+	border: 2px solid transparent;
+	font: 500 13px/24px $font-family-heading;
+	&:focus,
+	&:active{color: $white;}
+	&:hover{
+		color: $white;
+		background: transparent;
+	}
+}
+.btn-white{
+	color: $white;
+	padding: 10px 40px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	transition: all ease 0.3s;
+	border: 2px solid rgba(255,255,255,0.4);
+	font: 500 13px/24px $font-family-heading;
+	&:focus,
+	&:active{color: $white;}
+	&:hover{
+		color: $white;
+		border-color: $white;
+	}
+}
+.btn-default{
+	color: $color2;
+	padding: 11px 45px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	background: transparent;
+	transition: all ease 0.3s;
+	border: 2px solid #e0e0e0;
+	font: 500 13px/24px $font-family-heading;
+	&:focus,
+	&:active{
+		color: $color2 !important;
+		background: transparent !important;
+	}
+	&:hover{
+		background: #e0e0e0;
+		border-color: #e0e0e0;
+		color: $color2 !important;
+		&.add{
+			border-color: $color2;
+			background: transparent;
+		}
+	}
+}
+.btn-full{
+	color: $white;
+	padding: 11px 45px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	background: transparent;
+	transition: all ease 0.3s;
+	border: 2px solid transparent;
+	font: 500 13px/24px $font-family-heading;
+	&:focus,
+	&:active{color: $color2;}
+	&:hover{
+		color: $color2;
+		background: transparent;
+	}
+}
+.btn-dark{
+	color: $white;
+	padding: 9px 50px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	background: $color2;
+	transition: all ease 0.3s;
+	border: 2px solid $color2;
+	font: 500 13px/24px $font-family-heading;
+	&:focus,
+	&:active{color: $color2;}
+	&:hover{
+		color: $color2;
+		background: transparent;
+	}
+}
+.btn-add{
+	color: $white;
+	padding: 7px 22px;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	border: 2px solid #555;
+	background: transparent;
+	transition: all ease 0.3s;
+	font: 500 8px/14px $font-family-heading;
+	&:focus,
+	&:active{color: $white;}
+	&:hover{
+		color: $white;
+		border-color: $white;
+	}
+}
+/*------------------------------------------------------------------
+	4. Main heading styles   /   .main-heading
+-------------------------------------------------------------------*/
+.main-heading{
+	font: 18px/28px $font-family-heading;
+	.heading{
+		color: $color2;
+		margin: 0 0 23px;
+		letter-spacing: -1.5px;
+		font: 500 36px/47px $font-family-heading;
+	}
+	p{margin: 0;}
+}
+/*------------------------------------------------------------------
+	5. page header styles   /   .page-header
+-------------------------------------------------------------------*/
+.page-header{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	color: $white;
+	overflow: hidden;
+	position: relative;
+	.heading{
+		margin: 0;
+		letter-spacing: -3px;
+		font: 500 75px/96px $font-family-heading;
+	}
+}
+/*------------------------------------------------------------------
+	6. breadcrumbs styles   /  .breadcrumbs
+-------------------------------------------------------------------*/
+.breadcrumbs{
+	margin: 0;
+	color: $white;
+	padding: 14px 0 0;
+	font: 16px/20px $font-family-heading;
+	a{
+		color: $white;
+		transition: all ease 0.3s;
+	}
+	li{
+		padding: 0;
+		vertical-align: middle;
+		&:after{
+			content: "/";
+			padding: 0 10px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&:last-child:after{display: none;}
+	}
+}
+/*------------------------------------------------------------------
+	7. main wrapper styles / #wrapper
+-------------------------------------------------------------------*/
+#main,
+#wrapper{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.w1{transition: all ease 0.3s;}
+/*------------------------------------------------------------------
+	8. Page header styles   /  #header
+-------------------------------------------------------------------*/
+#header{
+	z-index: 5;
+	position: relative;
+	.header-holder{
+		padding: 32px 0 25px;
+		transition: all ease 0.3s;
+		&.border{border-bottom: 1px solid rgba(250,250,250,0.12);}
+	}
+	&.nospace{
+		.header-holder{
+			top: 0;
+			left: 0;
+			right: 0;
+			position: fixed;
+		}
+		.opener{
+			color: $white;
+			.num{color: $white;}
+		}
+		.logo{
+			color: $white;
+			a{color: $white;}
+		}
+		#nav{
+			a{color: $white;}
+		}
+	}
+	&.sticky .header-holder{
+		top: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+		background: $color4;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+		.opener{
+			color: $text-color;
+			.num{color: $white;}
+		}
+		.logo{
+			color: $color2;
+			a{color: $color2;}
+		}
+		#nav{
+			a{color: $text-color;}
+		}
+	}
+	.holder{width: 88%;}
+	.cart-holder{
+		position: relative;
+		margin: 0 3px 0 32px;
+		.opener{display: block;}
+		&:hover{
+			.drop-sub{
+				opacity: 1;
+				visibility: visible;
+				transform: rotateX(0deg);
+			}
+		}
+	}
+	.opener{
+		font-size: 14px;
+		line-height: 34px;
+		position: relative;
+		color: $text-color;
+		transition: all ease 0.3s;
+		.num{
+			top: 1px;
+			right: -6px;
+			width: 15px;
+			height: 15px;
+			color: $white;
+			text-align: center;
+			position: absolute;
+			border-radius: 50%;
+			font: 500 11px/15px $font-family-heading;
+		}
+		&.search-opener{font-size: 16px;}
+	}
+}
+/*------------------------------------------------------------------
+	9. Page logo styles   /  .logo
+-------------------------------------------------------------------*/
+.logo{
+	color: $color2;
+	font: 500 32px/34px $font-family-heading;
+	a{
+		color: $color2;
+		transition: all ease 0.3s;
+	}
+}
+/*------------------------------------------------------------------
+	10. Page navigation styles   /  #nav
+-------------------------------------------------------------------*/
+#nav{
+	float: right;
+	margin: 0 59px 0 0;
+	font: 500 12px/15px $font-family-heading;
+	ul{margin: 0;}
+	li{
+		position: relative;
+		padding: 0 0 0 36px;
+		&:hover{
+			.drop{
+				opacity: 1;
+				visibility: visible;
+				transform: rotateX(0deg) translateX(-50%);
+			}
+		}
+	}
+	a{
+		display: block;
+		padding: 10px 0;
+		color: $text-color;
+		transition: all ease 0.3s;
+		&:hover{color: $color2;}
+	}
+	.drop-link{position: relative;}
+	.drop{
+		top: 100%;
+		left: 50%;
+		opacity: 0;
+		min-width: 220px;
+		line-height: 34px;
+		padding: 27px 0 0;
+		margin: 0 0 0 20px;
+		visibility: hidden;
+		position: absolute;
+		transform-origin: 0 0;
+		transform: rotateX(-90deg) translateX(-50%);
+		transition: all 0.3s ease-in-out 0s;
+		> ul{
+			padding: 15px 0;
+			background: $color5;
+			border-radius: 4px;
+		}
+		li{padding: 0;}
+		a{
+			display: block;
+			padding: 3px 20px;
+			&:before {
+				content: "\f105";
+				margin-right: 15px;
+				display: inline-block;
+				font-family: 'FontAwesome';
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	11. search popup styles   /  .search-popup
+-------------------------------------------------------------------*/
+.search-popup {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 9999;
+	position: fixed;
+	visibility: hidden;
+	text-align: center;
+	transition: all 0.4s linear;
+	background: rgba(54,54,54,0.95);
+	.holder{
+		width: 100%;
+		height: 100vh;
+		display: table;
+		vertical-align: middle;
+	}
+	.frame{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	form{
+		width: 770px;
+		margin: 0 auto;
+		position: relative;
+		border-bottom: 2px solid #9b9b9b;
+		@include placeholder {color: $white;}
+	}
+	.pe-7s-search{
+		border: 0;
+		top: 19px;
+		right: 5px;
+		padding: 0;
+		outline: none;
+		color: $white;
+		font-size: 23px;
+		position: absolute;
+		background: transparent;
+		transition: all 0.4s linear;
+	}
+	input{
+		margin: 0;
+		border: 0;
+		float: left;
+		width: 100%;
+		height: 60px;
+		outline: none;
+		color: $white;
+		background: none;
+		padding: 15px 0 15px;
+		font: 35px/50px $font-family-heading;
+		@include placeholder {color: $white;}
+	}
+	.search-close{
+		top: 60px;
+		width: 30px;
+		height: 30px;
+		right: 120px;
+		position: fixed;
+		span{
+			height: 2px;
+			width: 30px;
+			display: block;
+			background: $white;
+			transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			transition: all 0.4s linear;
+		}
+		span + span {
+			margin: -2px 0 0;
+			transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+		}
+	}
+}
+.search-active .search-popup {
+	opacity: 1;
+	visibility: visible;
+}
+/*------------------------------------------------------------------
+	12. drop sub styles   /  .drop-sub
+-------------------------------------------------------------------*/
+.drop-sub{
+	top: 100%;
+	opacity: 0;
+	z-index: 2;
+	right: -5px;
+	width: 250px;
+	padding: 27px 0 0;
+	visibility: hidden;
+	position: absolute;
+	transform-origin: 0 0;
+	transform: rotateX(-90deg);
+	transition: all 0.3s linear 0s;
+    .side-widget{
+		color: $white;
+		font-size: 11px;
+		overflow: hidden;
+		font-weight: 300;
+		border-radius: 4px;
+		background: $color5;
+		padding: 19px 16px 22px 11px;
+	}
+	.cart-row{
+		margin: 0 0 15px;
+		overflow: hidden;
+		padding: 0 0 15px;
+		position: relative;
+		border-bottom: 1px solid #404040;
+	}
+	.img{
+		float: left;
+		width: 50px;
+		margin: 0 16px 0 9px;
+	}
+	.mt-h{
+		overflow: hidden;
+		padding: 6px 0 0;
+	}
+	.close{
+		top: 8px;
+		right: 3px;
+		width: 16px;
+		height: 16px;
+		color: $white;
+		font-size: 12px;
+		background: #555;
+		line-height: 16px;
+		text-align: center;
+		position: absolute;
+		border-radius: 50%;
+		transition: all 0.4s linear 0s;
+	}
+	.mt-h-title {
+		color: $white;
+		display: block;
+		margin: 0 0 3px;
+		font: 11px/16px $font-family-heading;
+		a{color: $white;}
+	}
+	.cart-row-total {
+		color: $white;
+		overflow: hidden;
+		margin: -9px 0 11px;
+		padding: 0 3px 0 8px;
+		font: 12px/26px $font-family-heading;
+	}
+	.cart-btn-row {
+		overflow: hidden;
+		a{margin-left: 8px;}
+	}
+	.btn-full{
+		font-size: 8px;
+		line-height: 14px;
+		padding: 7px 22px;
+		&:hover{color: $white;}
+	}
+}
+/*------------------------------------------------------------------
+	13. main banner styles   /  .main-banner
+-------------------------------------------------------------------*/
+.main-banner{
+	z-index: 1;
+	color: $white;
+	position: relative;
+	font: 300 20px/34px $font-family-heading;
+	.bg-overlay{opacity: 0.3;}
+	&.small{
+		line-height: 30px;
+		p{margin: 0 0 40px;}
+	}
+	.caption{
+		z-index: 2;
+		height: 100vh;
+		position: relative;
+		@include v-align();
+		padding: 67px 0 30px;
+		&.left{text-align: left;}
+		&.autoheight{height: auto;}
+	}
+	.heading{
+		margin: 0 0 5px;
+		letter-spacing: -4px;
+		font: 100px/120px $font-family-heading;
+		&.add{
+			font-size: 70px;
+			margin-bottom: 15px;
+			letter-spacing: -2.6px;
+		}
+		&.small{
+			font-size: 45px;
+			line-height: 55px;
+			margin-bottom: 25px;
+			letter-spacing: -1.9px;
+		}
+		&.small2{
+			font-size: 40px;
+			line-height: 50px;
+			margin-bottom: 70px;
+			letter-spacing: -1.9px;
+		}
+		&.small3{
+			font-size: 60px;
+			line-height: 70px;
+			margin: 0 0 12px -4px;
+			letter-spacing: -2.3px;
+		}
+	}
+	.play{
+		width: 70px;
+		height: 70px;
+		margin: 0 36px;
+		color: $color2;
+		font-size: 16px;
+		line-height: 66px;
+		border-radius: 50%;
+		background: $white;
+		display: inline-block;
+		vertical-align: middle;
+		border: 2px solid $white;
+		transition: all 0.3s ease;
+		&:hover{
+			color: $white;
+			transform: scale(1.1);
+			background: transparent;
+		}
+	}
+	p{margin: 0 0 55px;}
+	.btn-bottom{
+		left: 50%;
+		z-index: 2;	
+		bottom: 60px;
+		color: $white;
+		font-size: 50px;
+		position: absolute;
+		transition: all 0.3s ease;
+		transform: translateX(-50%);
+	}
+	.email-form{
+		max-width: 570px;
+		margin: 0 auto;
+		.holder{margin: 0 0 15px;}
+		.input{
+			width: 67%;
+			height: 48px;
+			padding: 10px 29px;
+		}
+		.btn{
+			width: 33%;
+			padding: 10px;
+			text-transform: uppercase;
+		}
+	}
+	.slide{
+		z-index: 1;
+		position: relative;
+	}
+	.slick-dots{
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		bottom: 71px;
+		text-align: center;
+		position: absolute;
+		li{
+			width: 9px;
+			height: 9px;
+			margin: 0 5px;
+			cursor: pointer;
+			text-align: left;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			display: inline-block;
+			vertical-align: middle;
+			border: 1px solid $white;
+			transition: all .3s ease;
+			&:hover,
+			&.slick-active{background: $white;}
+		}
+	}
+	.slick-arrow{
+		top: 50%;
+		border: 0;
+		z-index: 2;
+		width: 55px;
+		height: 55px;
+		font-size: 0;
+		overflow: hidden;
+		position: absolute;
+		background: $color5;
+		transition: all ease 0.3s;
+		border-radius: 4px 0 0 4px;
+		transform: translateY(-50%);
+		&:after{
+			color: $white;
+			font-size: 40px;
+			content: "\e684";
+			line-height: 55px;
+			font-family: 'Pe-icon-7-stroke';
+		}
+		&.slick-next{right: 0;}
+		&.slick-prev{
+			left: 0;
+			border-radius: 0 4px 4px 0;
+			&:after{content: "\e686";}
+		}
+		&:hover{background: rgba(40,40,40,0.7);}
+	}
+}
+.main-text{
+	display: block;
+	letter-spacing: -1.2px;
+	font: 28px/38px $font-family-heading;
+}
+/*------------------------------------------------------------------
+	14. icon box styles   /  .icon-box
+-------------------------------------------------------------------*/
+.icon-box{
+	font-size: 14px;
+	line-height: 24px;
+	.icon{
+		float: left;
+		font-size: 50px;
+		margin: 13px 36px 0 0;
+		&.add{margin: 6px 26px 0 0;}
+	}
+	.title{
+		display: block;
+		color: $color2;
+		margin: 0 0 11px;
+		letter-spacing: -0.8px;
+		font: 500 18px/38px $font-family-heading;
+		&.large{font-size: 22px;}
+	}
+	.holder{overflow: hidden;}
+	p{margin: 0;}
+	&.style2{
+		font-size: 16px;
+		line-height: 26px;
+		.icon{
+			float: none;
+			display: block;
+			font-size: 60px;
+			margin: 0  0 20px;
+		}
+		.title{font-size: 22px;}
+	}
+	&.small{
+		.icon{
+			font-size: 35px;
+			margin: 1px 15px 0 0;
+		}
+		p{margin: 0 0 7px;}
+	}
+	&.style3{
+		.icon{
+			float: none;
+			display: block;
+			font-size: 60px;
+			margin: 9px 0 15px;
+		}
+		.btn{
+			font-size: 9px;
+			padding: 3px 19px;
+			border-width: 1px;
+			text-transform: uppercase;
+		}
+	}
+}
+/*------------------------------------------------------------------
+	15. portfolio box styles   /  .portfolio-box
+-------------------------------------------------------------------*/
+.portfolio-box{
+	overflow: hidden;
+	position: relative;
+	&:hover .over{
+		opacity: 1;
+		visibility: visible;
+		.text,
+		.heading{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	img{width: 100%;}
+	.over{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		transition: all 0.3s ease;
+		background: rgba(54,54,54,0.8);
+	}
+	.holder{
+		height: 100%;
+		display: table;
+		vertical-align: top;
+	}
+	.frame{
+		display: table-cell;
+		vertical-align: top;
+		padding: 46px 39px;
+	}
+	.heading{
+		opacity: 0;
+		color: $white;
+		display: block;
+		letter-spacing: -0.8px;
+		transform: translateY(20px);
+		transition: all 0.4s ease 0.2s;
+		font: 500 20px/26px $font-family-heading;
+	}
+	.text{
+		opacity: 0;
+		color: $white;
+		display: block;
+		font-size: 12px;
+		line-height: 18px;
+		transform: translateY(20px);
+		transition: all 0.4s ease 0.2s;
+	}
+}
+.hidden{display: none !important;}
+.item{
+	float: left;
+	&.col4{width: 25%;}
+	&.col3{width: 33.33%;}
+}
+/*------------------------------------------------------------------
+	16. isotop filter styles   /  .isotop-filter
+-------------------------------------------------------------------*/
+.isotop-filter{
+	margin: 0;
+	font: 300 18px/30px $font-family-heading;
+	li{padding: 4px 8px 8px 15px;}
+	a{
+		color: $text-color;
+		transition: all 0.3s ease;
+	}
+}
+/*------------------------------------------------------------------
+	17. testimonial section styles   /  .t-section
+-------------------------------------------------------------------*/
+.t-section{
+	color: $white;
+	position: relative;
+	.container{z-index: 1;}
+	.heading{
+		color: $white;
+		margin: 0 0 41px;
+		letter-spacing: -1.5px;
+		font: 500 36px/47px $font-family-heading;
+	}
+	blockquote{
+		border: 0;
+		padding: 0 1%;
+		font-size: 20px;
+		margin: 0 0 15px;
+		line-height: 32px;
+		q{
+			display: block;
+			margin: 0 0 27px;
+		}
+		cite{
+			display: block;
+			letter-spacing: -0.6px;
+			font: 500 16px/30px $font-family-heading;
+		}
+	}
+	.img{
+		border-radius: 50%;
+		margin: 11px auto 37px;
+	}
+	.slick-dots{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li{
+			width: 8px;
+			height: 8px;
+			margin: 0 3px;
+			cursor: pointer;
+			text-align: left;
+			overflow: hidden;
+			border-radius: 50%;
+			text-indent: -9999px;
+			display: inline-block;
+			vertical-align: middle;
+			border: 1px solid $white;
+			transition: all .3s ease;
+			&:hover,
+			&.slick-active{background: $white;}
+		}
+	}
+	&.grey{
+		color: $text-color;
+		.slick-dots li{
+			border-color: $color2;
+			&:hover,
+			&.slick-active{background: $color2;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	18. post styles   /  .post
+-------------------------------------------------------------------*/
+.post{
+	font-size: 14px;
+	overflow: hidden;
+	line-height: 24px;
+	> a{
+		display: block;
+		position: relative;
+	}
+	img{width: 100%;}
+	.box{padding: 33px 30px;}
+	.heading{
+		margin: 0;
+		color: $color2;
+		letter-spacing: -0.8px;
+		font: 500 20px/28px $font-family-heading;
+		a{
+			color: $color2;
+			transition: all .3s ease;
+		}
+	}
+	.meta{
+		display: block;
+		font-size: 12px;
+		font-weight: 300;
+		margin: 0 0 15px;
+		line-height: 26px;
+	}
+	p{margin: 0 0 25px;}
+	.more{
+		transition: all .3s ease;
+		font: 500 14px/24px $font-family-heading;
+	}
+	.play{
+		top: 50%;
+		left: 50%;
+		width: 80px;
+		height: 80px;
+		color: $color2;
+		font-size: 16px;
+		line-height: 80px;
+		border-radius: 50%;
+		background: $white;
+		position: absolute;
+		text-align: center;
+		transition: all 0.3s ease;
+		transform: translate(-50%, -50%);
+	}
+}
+.line-box{
+	padding: 20px 0;
+	overflow: hidden;
+	ul{margin: 0;}
+}
+/*------------------------------------------------------------------
+	19. Page footer styles   /  #footer
+-------------------------------------------------------------------*/
+#footer{
+	color: #f5f5f5;
+	font-size: 14px;
+	line-height: 24px;
+	.title{
+		color: $white;
+		display: block;
+		margin: 0 0 34px;
+		font: 500 14px/31px $font-family-heading;
+	}
+	.logo{
+		color: $white;
+		margin: 0 0 24px;
+		line-height: 43px;
+		a{color: $white;}
+	}
+	p{margin: 0;}
+	.f-bottom{
+		padding: 28px 0;
+		font-size: 14px;
+		line-height: 24px;
+		color: $text-color;
+		a{
+			color: $text-color;
+			transition: all 0.3s ease;
+		}
+	}
+}
+/*------------------------------------------------------------------
+	20. social styles   /  .social
+-------------------------------------------------------------------*/
+.social{
+	margin: 0;
+	li{padding: 0 23px 0 0;}
+	a{
+		color: #bdbdbd;
+		transition: all ease 0.3s;
+	}
+}
+/*------------------------------------------------------------------
+	21. twitter feed styles   /  .twitter-feed
+-------------------------------------------------------------------*/
+.twitter-feed{
+	margin: 0;
+	max-width: 310px;
+	li{
+		position: relative;
+		padding: 0 0 27px 35px;
+	}
+	.fa{
+		left: 0;
+		top: 4px;
+		font-size: 18px;
+		position: absolute;
+	}
+	a{
+		color: #f5f5f5;
+		transition: all ease 0.3s;
+	}
+}
+/*------------------------------------------------------------------
+	22. email form styles   /  .email-form
+-------------------------------------------------------------------*/
+.email-form{
+	@include placeholder {color: #999;}
+	label{
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0 0 31px;
+	}
+	.holder{
+		overflow: hidden;
+		border-radius: 30px;
+		@include placeholder {color: #999;}
+	}
+	.input{
+		border: 0;
+		margin: 0;
+		outline: 0;
+		width: 73%;
+		color: #999;
+		float: left;
+		height: 40px;
+		font-size: 14px;
+		box-shadow: none;
+		line-height: 20px;
+		padding: 10px 22px;
+		background: $white;
+		@include placeholder {color: #999;}
+	}
+	.btn{
+		width: 27%;
+		padding: 6px;
+		float: right;
+		font-size: 13px;
+		border-radius: 0;
+	}
+}
+/*------------------------------------------------------------------
+	23. wedo section styles   /  .wedo-section
+-------------------------------------------------------------------*/
+.wedo-section{
+	overflow: hidden;
+	padding-top: 10px;
+	position: relative;
+	padding-bottom: 20px;
+	.img-box{
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 36.5%;
+		position: absolute;
+		&.right{
+			left: 0;
+			right: auto;
+		}
+		&.add{
+			top: 100px;
+			width: 53.7%;
+		}
+	}
+	.main-heading .heading{font-size: 34px;}
+	.play{
+		top: 50%;
+		left: 50%;
+		width: 70px;
+		height: 70px;
+		margin: 0 36px;
+		color: $color2;
+		font-size: 16px;
+		line-height: 70px;
+		border-radius: 50%;
+		background: $white;
+		position: absolute;
+		transition: all 0.3s ease;
+		transform: translate(-50%);
+		&:hover{transform: translate(-50%) scale(1.1);}
+	}
+	.content-block{
+		width: 56%;
+		float: right;
+		.img{margin: 0 auto 20px;}
+		.heading{
+			color: $color2;
+			margin: 0 0 8px;
+			letter-spacing: -1.4px;
+			text-transform: uppercase;
+			font: 500 36px/40px $font-family-heading;
+		}
+		.txt{
+			display: block;
+			margin: 0 0 13px;
+			text-transform: uppercase;
+			font: 16px/20px $font-family-heading;
+		}
+		.btn{
+			padding: 0;
+			font-size: 9px;
+			padding: 0 24px;
+			line-height: 20px;
+		}
+	}
+	&.add{
+		.main-heading{
+			font-size: 16px;
+			line-height: 26px;
+			.heading{
+				font-size: 32px;
+				margin: 0 0 23px;
+				line-height: 44px;
+			}
+		}
+		.img-box{width: 50%;}
+	}
+	&.add2{
+		.img-box{
+			left: 0;
+			right: auto;
+			width: 43.7%;
+			&.add{
+				top: 100px;
+				width: 53.7%;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	24. price box styles   /  .price-box
+-------------------------------------------------------------------*/
+.price-box{
+	width: 370px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 38px 10px 50px;
+	&.active{
+		background: $white;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);;
+	}
+	.title{
+		display: block;
+		color: $color2;
+		margin: 0 0 15px;
+		font: 12px/34px $font-family-heading;
+	}
+	.price{
+		display: block;
+		color: $color2;
+		margin: 0 0 5px;
+		letter-spacing: -2px;
+		font: 600 70px/70px $font-family-heading;
+		sup{
+			top: -37px;
+			right: -16px;
+			font-size: 20px;
+			margin: 0 0 0 -35px;
+		}
+	}
+	.dur{
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0 0 39px;
+	}
+	ul{
+		color: $color2;
+		margin: 0 0 36px;
+		li{margin: 0 0 9px;}
+	}
+	.pe-7s-close {
+		display: block;
+		font-size: 22px;
+		padding: 3px 0;
+	}
+	.btn{padding: 12px 55px;}
+}
+/*------------------------------------------------------------------
+	25. subscribe form styles   /  .subscribe-form
+-------------------------------------------------------------------*/
+.subscribe-form{
+	.heading{
+		color: $color2;
+		margin: 0 0 66px;
+		letter-spacing: -1.5px;
+		font: 500 34px/47px $font-family-heading;
+	}
+	.input{
+		border: 0;
+		outline: 0;
+		width: 200px;
+		height: 50px;
+		font-size: 14px;
+		box-shadow: none;
+		line-height: 20px;
+		color: $text-color;
+		padding: 15px 22px;
+		background: $color4;
+		margin: 0 12px 10px;
+		border-radius: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		@include placeholder {color: $text-color;}
+		&.large{width: 370px;}
+	}
+	.btn{
+		padding: 10px 53px;
+		margin: 0 12px 10px;
+	}
+}
+/*------------------------------------------------------------------
+	26. team box styles   /  .team-box
+-------------------------------------------------------------------*/
+.team-box{
+	img{width: 100%;}
+	.img-box{margin: 0 0 22px;}
+	.heading{
+		margin: 0;
+		color: $color2;
+		letter-spacing: -0.8px;
+		font: 600 20px/34px $font-family-heading;
+	}
+	.text{
+		display: block;
+		font-size: 13px;
+		margin: 0 0 14px;
+		line-height: 14px;
+	}
+	.social{
+		font-size: 14px;
+		li{padding: 3px 9px;}
+	}
+}
+/*------------------------------------------------------------------
+	27. quote section styles   /  .quote-section
+-------------------------------------------------------------------*/
+.quote-section{
+	blockquote{
+		border: 0;
+		width: 44%;
+		padding: 0;
+		float: left;
+		font-size: 20px;
+		line-height: 33px;
+		position: relative;
+		margin: 81px 2.1% 0 13.7%;
+		.fa{
+			top: 10px;
+			left: -60px;
+			color: $color2;
+			font-size: 30px;
+			position: absolute;
+		}
+		q{
+			display: block;
+			margin: 0 0 32px;
+			&:before,
+			&:after{display: none;}
+		}
+		cite{
+			display: block;
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 18px;
+			font-style: normal;
+		}
+		.name{
+			color: $color2;
+			display: block;
+			font: 600 15px/20px $font-family-heading;
+		}
+	}
+	.img{margin: 10px 0 0;}
+}
+/*------------------------------------------------------------------
+	27. quote section styles   /  .quote-section
+-------------------------------------------------------------------*/
+.promo-box{
+	padding: 8px 0; 
+	.btn{
+		padding: 14px 40px;
+		vertical-align: middle;
+	}
+	.txt{
+		color: $white;
+		display: inline-block;
+		vertical-align: middle;
+		letter-spacing: -0.8px;
+		margin: -5px 54px 0 -8px;
+		font: 600 29px/50px $font-family-heading;
+	}
+}
+/*------------------------------------------------------------------
+	28. product box styles   /  .product-box
+-------------------------------------------------------------------*/
+.product-box{
+	&:hover .img-box img{transform: scale(1.1);}
+	.img-box{
+		height: 320px;
+		display: block;
+		overflow: hidden;
+		@include v-align();
+		background: #f5f5f5;
+		img{transition: all ease 0.3s;}
+	}
+	a{transition: all ease 0.3s;}
+	.box{
+		overflow: hidden;
+		background: $white;
+		padding: 24px 30px;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+	}
+	.frame{overflow: hidden;}
+	.heading{
+		margin: 0;
+		color: $color2;
+		letter-spacing: -0.8px;
+		font: 600 18px/28px $font-family-heading;
+		a{color: $color2;}
+		&.large{font-size: 20px;}
+	}
+	.price{
+		float: left;
+		font-size: 14px;
+	}
+	.star{
+		margin: 0;
+		font-size: 15px;
+		li{
+			padding: 0;
+			margin: 0 0 0 -2px;
+		}
+	}
+	&.small{
+		.img-box{height: 256px;}
+		.box{padding: 19px 24px 17px 26px;}
+		.heading{
+			font-size: 16px;
+			line-height: 23px;
+		}
+		.price{font-size: 12px;}
+		.star{
+			font-size: 13px;
+			li{margin: 0 0 0 -1px;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	29. promo block styles   /  .promo-block
+-------------------------------------------------------------------*/
+.promo-block{
+	color: $white;
+	font-size: 18px;
+	overflow: hidden;
+	font-weight: 300;
+	line-height: 28px;
+	position: relative;
+	p{margin: 0 0 33px;}
+	.heading{
+		margin: 0 0 15px;
+		letter-spacing: -1.4px;
+		font: 600 34px/48px $font-family-heading;
+		&.add{
+			font-size: 32px;
+			margin: 0 0 39px;
+		}
+	}
+	.btn{margin: 0 0 10px;}
+	&.grey{
+		color: $text-color;
+		.heading{color: $color2;}
+		.btn:hover{color: $color2;}
+	}
+}
+/*------------------------------------------------------------------
+	30. progress bar styles   /  .progress-bar
+-------------------------------------------------------------------*/
+.progress-bar{
+	overflow: hidden;
+	padding: 24px 0 0;
+	ul{margin: 0;}
+	li{margin: 0 0 25px;}
+	.frame{
+		margin: 0 0 10px;
+		overflow: hidden;
+	}
+	.txt{
+		float: left;
+		color: $color2;
+		font: 18px/23px $font-family-heading;
+	}
+	.number{
+		float: right;
+		color: #2c3e50;
+		font: 18px/32px $font-family-heading;
+	}
+}
+/*------------------------------------------------------------------
+	31. bar outer styles   /  .bar-outer
+-------------------------------------------------------------------*/
+.bar-outer{
+	height: 9px;
+	display: block;
+	position: relative;
+	background: #f2f2f2;
+	border-radius: 10px;
+	.bar{
+		top: 0;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+		border-radius: 10px;
+	}
+}
+/*------------------------------------------------------------------
+	32. shop header styles   /  .shop-header
+-------------------------------------------------------------------*/
+.shop-header{
+	overflow: hidden;
+	padding-top: 17px;
+	font: 14px/14px $font-family-heading;
+	.txt{
+		float: left;
+		letter-spacing: -0.6px;
+	}
+	.sort-filter{
+		float: right;
+		position: relative;
+		margin: -3px 30px 0 0;
+		letter-spacing: -0.8px;
+		label{
+			margin: 0;
+			font-weight: normal;
+		}
+		select{
+			margin: 0;
+			border: 0;
+			padding: 0;
+			width: auto;
+			outline: 0 !important;
+			background: transparent;
+			-webkit-appearance: none;
+			-moz-appearance:    none;
+			appearance:         none;
+		}
+		&:after{
+			top: 2px;
+			right: -30px;
+			color: #bdbdbd;
+			content:"\f107";
+			position: absolute;
+			font-family:'FontAwesome';
+		}
+	}
+}
+/*------------------------------------------------------------------
+	33. shop pagination styles   /  .shop-pagination
+-------------------------------------------------------------------*/
+.shop-pagination{
+	margin: 0;
+	font-size: 12px;
+	line-height: 28px;
+	padding: 18px 0 10px;
+	li{
+		padding: 0;
+		vertical-align: middle;
+	}
+	a{
+		display: block;
+		color: #bdbdbd;
+		min-width: 30px;
+		border-radius: 2px;
+		transition: all ease 0.3s;
+		border: 1px solid transparent;
+	}
+}
+.map-holder .map {
+  width: 100%;
+  height: 500px;
+}
+/*------------------------------------------------------------------
+	34. info box styles   /  .info-box
+-------------------------------------------------------------------*/
+.info-box{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	background: $white;
+	padding: 53px 10px;
+	.icon{
+		display: block;
+		font-size: 70px;
+		margin: 0 0 11px;
+		line-height: 90px;
+	}
+	.heading{
+		display: block;
+		color: $color2;
+		margin: 0 0 18px;
+		letter-spacing: -1px;
+		font: 500 24px/36px $font-family-heading;
+	}
+}
+/*------------------------------------------------------------------
+	35. contact form styles   /  .contact-form
+-------------------------------------------------------------------*/
+.contact-form{
+	@include placeholder {color: #777;}
+	.form-control{
+		border: 0;
+		color: #777;
+		height: 46px;
+		font-size: 14px;
+		box-shadow: none;
+		font-weight: 300;
+		margin: 0 0 30px;
+		line-height: 24px;
+		padding: 6px 27px;
+		border-radius: 20px;
+		transition: all ease 0.3s;
+		@include placeholder {color: #777;}
+		&:focus{box-shadow: 0 4px 10px rgba(0,0,0,0.02)}
+	}
+	textarea.form-control{
+		resize: none;
+		overflow: auto;
+		padding: 18px 30px;
+		height: 180px !important;
+	}
+	.btn{
+		width: 100%;
+		display: block;
+		text-transform: uppercase;
+	}
+	.form-message{
+		color: $white;
+		font-size: 11px;
+		font-weight: 600;
+		position: relative;
+		padding: 15px 25px 13px 50px;
+		&:after{
+			top: 14px;
+			left: 17px;
+			width: 20px;
+			content: "";
+			height: 20px;
+			font-size: 9px;
+			font-weight: 400;
+			line-height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			text-align: center;
+			font-family:'FontAwesome';
+		}
+		&.error{
+			margin: 0 0 20px;
+			background: #ff3333;
+			padding: 15px 20px 13px 50px;
+			&:after{
+				content:"\f00d";
+				background: #cc2929;
+			}
+		}
+		&.success{
+			margin: 0 0 20px;
+			background: #698cf0;
+			padding: 15px 20px 13px 50px;
+			&:after{
+				content:"\f00c";
+				background: #5470c0;
+			}
+		}
+		&.hidden{display: none;}
+	}
+}
+/*------------------------------------------------------------------
+	36. section 404 styles   /  .section-404
+-------------------------------------------------------------------*/
+.section-404{
+	font-size: 18px;
+	line-height: 25px;
+	.heading{
+		margin: 0;
+		color: $color2;
+		margin: 0 0 24px;
+		letter-spacing: -2.7px;
+		font: 600 70px/80px $font-family-heading;
+	}
+	p{margin: 0 0 55px;}
+}
+/*------------------------------------------------------------------
+	37. port slider styles   /  .port-slider
+-------------------------------------------------------------------*/
+.port-slider{
+	img{
+		width: 100%;
+		transition: all ease 0.3s;
+	}
+	&:hover img{transform: scale(1.1);}
+	.slick-slide{overflow: hidden;}
+	.slick-arrow{
+		top: 50%;
+		border: 0;
+		z-index: 2;
+		font-size: 0;
+		height: 90px;
+		overflow: hidden;
+		position: absolute;
+		background: transparent;
+		transition: all ease 0.3s;
+		border-radius: 4px 0 0 4px;
+		transform: translateY(-50%);
+		&:after{
+			color: $color1;
+			font-size: 90px;
+			content: "\e684";
+			line-height: 90px;
+			font-family: 'Pe-icon-7-stroke';
+		}
+		&.slick-next{right: 15px;}
+		&.slick-prev{
+			left: 15px;
+			border-radius: 0 4px 4px 0;
+			&:after{content: "\e686";}
+		}
+		&:hover{color: $color5;}
+	}
+}
+/*------------------------------------------------------------------
+	38. port detail styles   /  .port-detail
+-------------------------------------------------------------------*/
+.port-detail{
+	font-size: 16px;
+	line-height: 26px;
+	.heading{
+		color: $color2;
+		display: block;
+		margin: 0 0 30px;
+		letter-spacing: -1.7px;
+		font: 500 36px/40px $font-family-heading;
+	}
+	.subheading{
+		color: $color2;
+		display: block;
+		margin: 0 0 -3px;
+		letter-spacing: -1px;
+		font: 500 18px/31px $font-family-heading;
+	}
+	.txt{
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0 0 22px;
+	}
+	p{margin: 0 0 30px;}
+	.social{
+		font-size: 14px;
+		li{
+			padding: 0 13px 0 0;
+			vertical-align: middle;
+		}
+		a:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+		.fa-twitter{color: #1da1f2;}
+		.fa-facebook{color: #3b5998;}
+		.fa-google-plus{color: #dd4b39;}
+		.fa-pinterest-p{color: #bd081c;}
+	}
+}
+.btn-port{
+	color: $color2;
+	transition: all ease 0.3s;
+	font: 500 18px/26px $font-family-heading;
+}
+/*------------------------------------------------------------------
+	39. search form styles   /  .search-form
+-------------------------------------------------------------------*/
+.search-form{
+	margin: 0 0 43px;
+	overflow: hidden;
+	position: relative;
+	transition: all ease 0.5s;
+	@include placeholder {color: #bdbdbd;}
+	input.form-control{
+		outline: 0;
+		height: 45px;
+		color: #bdbdbd;
+		font-size: 14px;
+		box-shadow: none;
+		padding: 6px 21px;
+		border-radius: 30px;
+		background: transparent;
+		border: 2px solid #e0e0e0;
+		@include placeholder {color: #bdbdbd;}
+		&:focus{border-color: $color2;}
+	}
+	.icon{
+		border: 0;
+		top: 13px;
+		padding: 0;
+		right: 21px;
+		color: #bdbdbd;
+		position: absolute;
+		background: transparent;
+		transition: all ease 0.5s;
+		&:hover{color: $color2;}
+	}
+}
+/*------------------------------------------------------------------
+	40. widget styles   /  .widget
+-------------------------------------------------------------------*/
+.widget{
+	margin: 0 0 44px;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #eee;
+	.heading{
+		display: block;
+		color: $color2;
+		margin: 0 0 28px;
+		letter-spacing: -0.7px;
+		font: 500 18px/25px $font-family-heading;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	a{transition: all ease 0.3s;}
+	&:last-child{border: 0;}
+}
+.cat-widget{
+	font-size: 14px;
+	color: #bdbdbd;
+	a{color: #bdbdbd;}
+	li{margin: 0 0 12px;}
+	.fa{margin: 0 6px 0 0;}
+}
+.post-widget{
+	ul{
+		margin: 0;
+		padding: 0 0 4px;
+	}
+	li{
+		overflow: hidden;
+		padding: 5px 0 15px;
+	}
+	.img-box{
+		width: 70px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.text-box{
+		width: 180px;
+		padding: 0 0 0 12px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.head{
+		margin: 0;
+		display: block;
+		color: $color2;
+		letter-spacing: -0.5px;
+		font: 500 12px/20px $font-family-heading;
+		a{color: $color2;}
+		&,add{
+			font-size: 14px;
+			margin: -2px 0 4px;
+		}
+	}
+	.txt{
+		display: block;
+		font-size: 10px;
+	}
+}
+.filter-widget{
+	.con-bar{
+		top: 10px;
+		display: block;
+		margin: 0 0 30px;
+		position: relative;
+		border-top: 3px solid #e5e5e5;
+	}
+	.price{
+		float: left;
+		color: $color2;
+		margin: 0 0 20px;
+		font: 500 14px/20px $font-family-heading;
+	}
+	.btn-filter{
+		float: right;
+		padding: 10px;
+		color: $color2;
+		margin: -3px 0 0;
+		padding: 4px 20px;
+		border-radius: 30px;
+		border: 1px solid #e0e0e0;
+		font: 500 10px/15px $font-family-heading;
+		&:hover{color: $white;}
+	}
+	.dot{
+		top: -3px;
+		left: 30px;
+		width: 120px;
+		position: absolute;
+		border-top: 3px solid $color2;
+		&:after{
+			left: 0;
+			width: 9px;
+			height: 9px;
+			top: -6.5px;
+			content: "";
+			cursor: pointer;
+			position: absolute;
+			border-radius: 50%;
+			background: $color2;
+		}
+		&:before{
+			right: 0;
+			width: 9px;
+			height: 9px;
+			top: -6.5px;
+			content: "";
+			cursor: pointer;
+			position: absolute;
+			border-radius: 50%;
+			background: $color2;
+		}
+	}
+}
+.tags-widget{
+	text-transform: capitalize;
+	ul li{
+		margin: 0 0 -2px;
+		vertical-align: top;
+		padding: 7px 3px 0 0;
+	}
+	a{
+		color: $color2;
+		vertical-align: top;
+		display: inline-block;
+		transition: all ease 0.3s;
+		border: 1px solid #e0e0e0;
+		padding: 4px 11px 4px 12px;
+		font: 500 9px/15px $font-family-heading;
+		&:hover{border-color: $color2;}
+	}
+}
+/*------------------------------------------------------------------
+	41. image slider styles   /  .image-slider
+-------------------------------------------------------------------*/
+.image-slider{
+	.slick-list{
+		float: right;
+		width: 78.9%;
+		overflow: hidden;
+	}
+	.slick-dots{
+		margin: 0;
+		width: 20%;
+		padding: 0;
+		float: left;
+		overflow: hidden;
+		list-style: none;
+		li span{
+			cursor: pointer;
+			background: $white;
+			margin-bottom: 20px;
+			vertical-align: top;
+			display: inline-block;
+		}
+		img{
+			opacity: 0.5;
+			transition: all ease 0.3s;
+		}
+		.slick-active img{opacity: 1;}
+	}
+}
+/*------------------------------------------------------------------
+	42. product detail styles   /  .product-detail
+-------------------------------------------------------------------*/
+.product-detail{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	.heading{
+		display: block;
+		color: $color2;
+		margin: 0 0 12px;
+		letter-spacing: -1.4px;
+		font: 500 36px/50px $font-family-heading;
+	}
+	.star{
+		font-size: 14px;
+		margin: 0 0 47px 3px;
+		li{padding: 0;}
+	}
+	.price{
+		display: block;
+		color: $color2; 
+		margin: 0 0 18px 3px;
+		letter-spacing: -0.9px;
+		font: 500 20px/30px $font-family-heading;
+		del{color: $text-color;}
+	}
+	p{margin: 0 0 48px 4px;}
+	form{
+		margin: 0 0 24px;
+		@include placeholder {color: $color2;}
+		.form-control{
+			float: left;
+			width: 70px;
+			height: 43px;
+			font-size: 18px;
+			border-radius: 0;
+			text-align: center;
+			margin: 0 20px 0 4px;
+			background: transparent;
+			border: 1px solid #e0e0e0;
+			@include placeholder {color: $color2;}
+		}
+		.btn-full{
+			padding: 8px 21px;
+			text-transform: uppercase;
+		}
+	}
+	.social{font-size: 17px;}
+}
+/*------------------------------------------------------------------
+	43. product tabsec styles   /  .product-tabsec
+-------------------------------------------------------------------*/
+.product-tabsec{
+	.mainheading{
+		color: $color2;
+		display: block;
+		margin: 0 0 38px;
+		letter-spacing: -0.8px;
+		font: 500 20px/35px $font-family-heading;
+	}
+	.tabset{
+		margin: 0 0 50px;
+		border-bottom: 1px solid #e5e5e5;
+		font: 500 16px/30px $font-family-heading;
+		li{padding: 0;}
+		a{
+			display: block;
+			color: $text-color;
+			margin-bottom: -2px;
+			padding: 0 28px 11px;
+			letter-spacing: -0.7px;
+			transition: all ease 0.3s;
+			border-bottom: 1px solid #e5e5e5;
+			&.active,
+			&:hover{
+				color: $color2;
+				border-color: $color2;
+			}
+		}
+	}
+	dl{
+		margin: 0;
+		font-size: 14px;
+		line-height: 25px;
+		padding: 5px 0 0 24px;
+		dt{
+			float: left;
+			width: 109px;
+			color: $color2;
+			margin: 0 0 22px;
+			font-weight: normal;
+		}
+		dd{
+			margin: 0 0 22px;
+			overflow: hidden;
+		}
+	}
+	.review-list{
+		margin: 0;
+		font-size: 14px;
+		overflow: hidden;
+		list-style: none;
+		font-weight: 300;
+		line-height: 24px;
+		padding: 11px 0 9px 4px;
+		> li{
+			max-width: 574px;
+			margin: 0 0 31px;
+			overflow: hidden;
+		}
+		.img{
+			float: left;
+			margin: 0 30px 0 0;
+			border-radius: 50%;
+		}
+		.holder{overflow: hidden;}
+		.top{
+			overflow: hidden;
+			padding: 4px 0 18px;
+		}
+		.name{
+			color: $color2;
+			padding: 0 18px 0 0;
+			display: inline-block;
+			vertical-align: middle;
+			letter-spacing: -0.8px;
+			font: 500 18px/25px $font-family-heading;
+		}
+		.time{
+			font-size: 12px;
+			font-weight: 300;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.star{
+			margin: 1px 0 0;
+			font-size: 13px;
+			li{padding: 0;}
+		}
+		.reply{margin: 0 7px 0 0;}
+		.frame{
+			overflow: hidden;
+			padding: 0 0 30px;
+		}
+		.review-list{
+			max-width: 674px;
+			padding: 50px 0 0 0;
+			border-top: 1px solid $color3;
+			li{
+				padding-left: 100px;
+				border-bottom: 1px solid $color3;
+				&:last-child{margin-bottom: 17px;}
+			}
+		}
+		&.add{
+			padding-left: 0;
+			li{max-width: 100%;}
+			.frame{max-width: 574px;}
+		}
+	}
+	.review-form{
+		max-width: 574px;
+		padding: 55px 0 0 4px;
+		&.add{padding: 4px 0 8px;}
+		.heading{
+			color: $color2;
+			display: block;
+			margin: 0 0 38px;
+			letter-spacing: -0.8px;
+			font: 500 20px/25px $font-family-heading;
+		}
+		.star{
+			font-size: 14px;
+			margin: 0 0 22px;
+			font-weight: 300;
+			line-height: 24px;
+			li{
+				padding: 0;
+				&:first-child{padding: 0 17px 0 0;}
+			}
+		}
+		.contact-form textarea.form-control{height: 160px !important;}
+		.btn-full{
+			display: inline-block;
+			vertical-align: top;
+			padding: 6px 41px;
+			width: auto;
+		}
+	}
+}
+.full-width{
+	.product-tabsec{
+		.review-list{
+			&.add{
+				.frame{ max-width: 100%; }
+			}
+			.review-list{ max-width: 100%; }
+		}
+		.review-form{ max-width: 100%; }
+	}
+}
+/*------------------------------------------------------------------
+	44. related product styles   /  .related-product
+-------------------------------------------------------------------*/
+.related-product{
+	.mainheading{
+		color: $color2;
+		display: block;
+		margin: 0 0 38px;
+		letter-spacing: -0.8px;
+		font: 500 24px/37px $font-family-heading;
+	}
+}
+/*------------------------------------------------------------------
+	45. blog detail styles   /  .blog-detail
+-------------------------------------------------------------------*/
+.blog-detail{
+	font-size: 16px;
+	margin: 0 0 50px;
+	overflow: hidden;
+	line-height: 26px;
+	.img{
+		overflow: hidden;
+		img{width: 100%;}
+	}
+	.text-box{
+		overflow: hidden;
+		background: $white;
+		padding: 37px 5% 0 4.4%;
+	}
+	.heading{
+		color: $color2;
+		display: block;
+		margin: 0 0 1px;
+		letter-spacing: -1.3px;
+		font: 500 30px/45px $font-family-heading;
+	}
+	.meta{
+		display: block;
+		font-size: 14px;
+		margin: 0 0 41px 2px;
+	}
+	p{margin: 0 0 26px;}
+	blockquote{
+		top: 4px;
+		color: $color2;
+		padding: 0 3.9%;
+		font-size: 18px;
+		line-height: 28px;
+		position: relative;
+		margin: 0 0 36px 7.8%;
+		border: 3px solid transparent;
+		border-width: 0 0 0 3px;
+	}
+	.post-footer{
+		margin: 45px 0 0;
+		overflow: hidden;
+		position: relative;
+		padding: 22px 0 20px 6px;
+		border-top: 1px solid #f2f2f2;
+		.tags{
+			margin: 0;
+			float: left;
+			font-size: 14px;
+			font-weight: 300;
+			font-style: italic;
+			li:first-child{
+				font-weight: 400;
+				font-style: normal;
+				padding: 0 14px 0 0;
+			}
+			li{padding: 0 3px 0 0;}
+			a{
+				color: $text-color;
+				text-decoration: underline;
+				&:hover{text-decoration: none;}
+			}
+		}
+		.social{
+			float: right;
+			font-size: 14px;
+			li{padding: 0 0 0 12px;}
+			.fa-twitter{color: #1da1f2;}
+			.fa-facebook{color: #3b5998;}
+			.fa-pinterest-p{color: #bd081c;}
+			.fa-google-plus{color: #dd4b39;}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	46. cart block styles   /  .cart-block
+-------------------------------------------------------------------*/
+.cart-block{
+	overflow: hidden;
+	.heading{
+		color: $color2;
+		margin: 0 0 42px;
+		letter-spacing: -1px;
+		font: 500 24px/35px $font-family-heading;
+	}
+	.cart-list{
+		overflow: hidden;
+		border: 1px solid $color3;
+	}
+	.header{
+		font-size: 14px;
+		overflow: hidden;
+		margin: 0 0 20px;
+		padding: 8px 0 8px 4.2%;
+		border-bottom: 1px solid $color3;
+		.col1{
+			width: 49.6%;
+			padding: 0 0 0 20px;
+		}
+		.col2{width: 12.6%;}
+		.col3{width: 21.1%;}
+	}
+	.col1{
+		float: left;
+		width: 48.4%;
+	}
+	.col2{
+		float: left;
+		width: 13.3%;
+	}
+	.col3{
+		width: 20.5%;
+		float: left;
+	}
+	.col4{
+		width: 11%;
+		float: left;
+	}
+	.holder{
+		margin: 0 0 20px;
+		overflow: hidden;
+		.form-control{
+			float: left;
+			width: 70px;
+			height: 43px;
+			font-size: 18px;
+			margin: 18px 0 0;
+			border-radius: 0;
+			box-shadow: none;
+			text-align: center;
+			background: transparent;
+			border: 1px solid #e0e0e0;
+			@include placeholder {color: $color2;}
+		}
+	}
+	.close{
+		top: 50px;
+		right: 3.2%;
+		font-size: 36px;
+		line-height: 40px;
+		color: $text-color;
+		position: absolute;
+	}
+	.row-box{
+		overflow: hidden;
+		padding: 30px 0 30px;
+		position: relative;
+		margin: 0 0 0 4.2%;
+		border-bottom: 1px solid $color3;
+		.img{
+			margin: 0 3.8% 0 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.txt{
+			color: $color2;
+			display: inline-block;
+			vertical-align: middle;
+			letter-spacing: -0.8px;
+			font: 500 18px/25px $font-family-heading;
+			a{
+				color: $color2;
+				transition: all .3s ease;
+			}
+		}
+		.price{
+			color: $color2;
+			padding: 27px 0 0;
+			display: inline-block;
+			vertical-align: middle;
+			font: 500 18px/25px $font-family-heading;
+		}
+		&:last-child{border-bottom: 0;}
+	}
+	.footer{
+		overflow: hidden;
+		padding: 30px 4% 31px 4.1%;
+		border-top: 1px solid $color3;
+	}
+	.coupon-form{
+		float: left;
+		width: 270px;
+		overflow: hidden;
+		position: relative;
+		border-radius: 30px;
+		border: 1px solid $color3;
+		.form-control{
+			margin: 0;
+			border: 0;
+			width: 100%;
+			height: 38px;
+			font-size: 13px;
+			box-shadow: none;
+			padding: 6px 25px;
+			color: $text-color;
+			@include placeholder {color: $text-color;}
+		}
+		.btn{
+			top: 0;
+			right: 0;
+			color: $white;
+			border-radius: 0;
+			padding: 6px 25px;
+			position: absolute;
+			background: $color2;
+			transition: all .3s ease;
+			text-transform: uppercase;
+			font: 500 12px/26px $font-family-heading;
+		}
+	}
+	.subtotal{
+		float: right;
+		padding: 7px 0 0;
+		color: $text-color;
+		letter-spacing: -0.7px;
+		font: 18px/30px $font-family-heading;
+		.add{
+			color: $color2;
+			font-size: 26px;
+			font-weight: 500;
+		}
+	}
+	.btn-box{
+		overflow: hidden;
+		padding: 41px 0 0;
+		.prev{
+			margin: 15px 0 0;
+			color: $text-color;
+			transition: all .3s ease;
+			font: 500 14px/20px $font-family-heading;
+		}
+	}
+	.summery{
+		font-size: 14px;
+		line-height: 20px;
+		border: 1px solid $color3;
+		padding: 40px 3.1% 46px 3.3%;
+		.heading{margin: 0 0 37px;}
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				margin: 0 0 16px;
+				overflow: hidden;
+				padding: 0 0 15px;
+				border-bottom: 1px solid $color3;
+			}
+		}
+		.total{
+			border: 0;
+			margin: 0;
+			color: $color2;
+			font-size: 18px;
+			padding: 6px 0 0;
+		}
+	}
+	.payment{
+		font-size: 14px;
+		line-height: 20px;
+		border: 1px solid $color3;
+		padding: 40px 3.1% 46px 3.3%;
+		.heading{margin: 0 0 37px;}
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				margin: 0 0 25px;
+				overflow: hidden;
+				padding: 0 0 25px;
+				border-bottom: 1px solid $color3;
+				&:last-child{
+					margin: 0;
+					border: 0;
+					padding: 0;
+				}
+			}
+		}
+		input{
+			float: left;
+			width: 18px;
+			height: 18px;
+			margin: 4px 14px 0 3px;
+		}
+		label{
+			margin: 0;
+			padding: 4px 0;
+			font-weight: normal;
+		}
+		.txt-alert{
+			width: 100%;
+			display: block;
+			font-size: 12px;
+			margin: 15px 0 5px;
+			padding: 15px 21px;
+			background: #f8f8f8;
+		}
+	}
+}
+/*------------------------------------------------------------------
+	47. billing info styles   /  .billing-info
+-------------------------------------------------------------------*/
+.billing-info{
+	border: 1px solid $color3;
+	padding: 40px 38px 40px 37px;
+	@include placeholder {color: #888;}
+	form{margin: 0 0 0 3px;}
+	.form-control{
+		color: #888;
+		height: 46px;
+		font-size: 14px;
+		box-shadow: none;
+		font-weight: 300;
+		margin: 0 0 32px;
+		line-height: 24px;
+		padding: 6px 27px;
+		border-radius: 20px;
+		transition: all ease 0.3s;
+		border: 1px solid $color3;
+		@include placeholder {color: #888;}
+		&:focus{box-shadow: 0 4px 10px rgba(0,0,0,0.02)}
+	}
+	textarea.form-control{
+		resize: none;
+		overflow: auto;
+		padding: 18px 30px;
+		height: 180px !important;
+	}
+	.check-holder{
+		margin: -6px 0 0;
+		input{
+			padding: 0;
+			float: left;
+			width: 15px;
+			height: 15px;
+			border-radius: 2px;
+			margin: 3px 9px 0 0;
+			border: 1px solid #e0e0e0;
+		}
+		label{
+			float: left;
+			font-size: 14px;
+			color: $text-color;
+			font-weight: normal;
+		}
+	}
+	.forget{
+		font-size: 14px;
+		margin: 10px 0 0;
+		color: $text-color;
+	}
+	.btn{margin: 0 0 11px;}
+}
+/*------------------------------------------------------------------
+	48. coming section styles   /  .coming-section
+-------------------------------------------------------------------*/
+.coming-section{
+	height: 100vh;
+	color: $white;
+	font-size: 18px;
+	line-height: 30px;
+	@include v-align();
+	.bg-overlay{opacity: 0.4;}
+	.holder{
+		z-index: 2;
+		position: relative;
+	}
+	.logo{
+		color: $white;
+		margin: 0 0 50px;
+		a{color: $white;}
+	}
+	.main-title{
+		display: block;
+		margin: 0 0 26px;
+		letter-spacing: -2.5px;
+		font: 500 70px/80px $font-family-heading;
+	}
+	p{margin: 0 0 46px;}
+	.frame{overflow: hidden;}
+	.countdown-section {
+		color: #fff;
+		width: 120px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 60px;
+		vertical-align: top;
+		display: inline-block;
+	}
+	.countdown-amount {
+		display: block;
+		margin: 0 0 -6px;
+		font: 55px/70px $font-family-heading;
+	}
+	.countdown-period {
+		color: $white;
+		display: block;
+		text-transform: capitalize;
+		font: 300 18px/30px $font-family-heading;
+	}
+	.is-countdown{margin: 0 0 90px;}
+}
+/*------------------------------------------------------------------
+	49. quote form styles   /  .quote-form
+-------------------------------------------------------------------*/
+.quote-form{
+	float: right;
+	width: 410px;
+	color: $text-color;
+	border-radius: 4px;
+	padding: 56px 30px 69px;
+	.form-heading{
+		color: $color5;
+		display: block;
+		margin: 0 0 3px;
+		font: 700 28px/30px $font-family-heading;
+	}
+	.form-title{
+		display: block;
+		margin: 0 0 49px;
+	}
+	.form-control{
+		border: 0;
+		margin: 0;
+		color: #777;
+		height: 46px;
+		font-size: 14px;
+		box-shadow: none;
+		font-weight: 300;
+		line-height: 24px;
+		padding: 6px 27px;
+		border-radius: 20px;
+		transition: all ease 0.3s;
+		@include placeholder {color: #777;}
+		&:focus{box-shadow: 0 4px 10px rgba(0,0,0,0.02)}
+	}
+	.form-group{
+		overflow: hidden;
+		margin: 0 0 20px;
+		&.has-error .form-control{
+			color: #ff3333;
+			border-color: #ff3333;
+		}
+	}
+	.fa{
+		font-size: 12px;
+		margin-right: 2px;
+	}
+	.btn{
+		width: 100%;
+		display: block;
+		padding: 11px 28px;
+		opacity: 1 !important;
+	}
+	.form-message{
+		color: $white;
+		font-size: 11px;
+		font-weight: 600;
+		position: relative;
+		&:after{
+			top: 14px;
+			left: 17px;
+			width: 20px;
+			content: "";
+			height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			text-align: center;
+			font-family:'FontAwesome';
+		}
+		&.error{
+			margin: 0 0 20px;
+			background: #ff3333;
+			padding: 15px 5px 13px 50px;
+			&:after{
+				content:"\f00d";
+				background: #cc2929;
+			}
+		}
+		&.success{
+			margin: 0 0 20px;
+			background: #698cf0;
+			padding: 15px 5px 13px 50px;
+			&:after{
+				content:"\f00c";
+				background: #5470c0;
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+	50. bgvid styles   /  #bgvid
+-------------------------------------------------------------------*/
+#bgvid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 91vh;
+	width: auto;
+	z-index: -100;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: url("images/img22.jpg") no-repeat;
+	background-size: cover;
+	-webkit-transition: 1s opacity;
+	transition: 1s opacity;
+}
+#bgvid .vegas-slide{height: 100%;}
+/*------------------------------------------------------------------
+	51. back top styles   /  #back-top
+-------------------------------------------------------------------*/
+#back-top {
+	bottom: 0;
+	opacity: 0;
+	z-index: 9;
+	right: 20px;
+	width: 50px;
+	color: #fff;
+	height: 50px;
+	z-index: 9999;
+	cursor: pointer;
+	font-size: 25px;
+	position: fixed;
+	line-height: 47px;
+	text-align: center;
+	border-radius: 3px;
+	background: #252525;
+	transition: all .6s ease;
+	transform: translateY(40px);
+	-ms-transform: translateY(40px);
+	-webkit-transition: all .6s ease;
+	-webkit-transform: translateY(40px);
+}
+#back-top.show {
+	opacity: 1;
+	transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	-webkit-transform: translateY(-20px);
+}
+#back-top:hover {opacity: .9;}
+.js-tab-hidden {
+	display:block !important;
+	left:-9999px !important;
+	position: absolute !important;
+	top:-9999px !important;
+}
+/*------------------------------------------------------------------
+	35. contact form styles   /  .contact-form
+-------------------------------------------------------------------*/
+.loader-container{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	.holder{
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%,-50%);
+	}
+}
+.spinner {
+	top: 45%;
+	left: 48%;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	vertical-align: top;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.spinner-round:before {
+	top: 0;
+	left: 0;
+	width: 50px;
+	content: " ";
+	height: 50px;
+	position: absolute;
+	border-radius: 50%;
+	vertical-align: top;
+	display: inline-block;
+	border-top: solid 4px $color2;
+	border-left: solid 4px $color2;
+	border-right: solid 4px $color2;
+	border-bottom: solid 4px $color2;
+}
+.spinner-round:after {
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	content: " ";
+	position: absolute;
+	border-radius: 50%;
+	vertical-align: top;
+	display: inline-block;
+	border-top: solid 4px $white;
+	border-left: solid 4px transparent;
+	border-right: solid 4px transparent;
+	border-bottom: solid 4px transparent;
+	animation: spinner-round-animate 1s ease-in-out infinite;
+}
+@keyframes spinner-round-animate {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}

@@ -1,0 +1,60 @@
+a,
+#nav a:hover,
+.logo a:hover,
+.social a:hover,
+.post .play:hover,
+.cat-widget a:hover,
+.la-line-scale > div,
+.breadcrumbs a:hover,
+.cat-widget .active a,
+.price-box .btn:hover,
+.twitter-feed a:hover,
+#header .opener:hover,
+.isotop-filter a:hover,
+.drop-sub .close:hover,
+.post .heading a:hover,
+.post-widget li a:hover,
+.cart-block .close:hover,
+.shop-pagination a:hover,
+.wedo-section .play:hover,
+#footer .f-bottom a:hover,
+.subscribe-form .btn:hover,
+.isotop-filter li.active a,
+.shop-pagination .active a,
+#header.nospace #nav a:hover,
+.product-box .heading a:hover,
+.drop-sub .mt-h-title a:hover,
+#nav > ul > li:hover > .drop-link,
+.cart-block .btn-box .prev:hover,
+.search-popup .pe-7s-search:hover,
+#header.nospace #nav li:hover > a,
+.product-tabsec .review-list .reply,
+#header.sticky .header-holder #nav a:hover,
+#header.sticky .header-holder #nav li:hover > a,
+.main-color {
+  color: #2ecc71;
+  /*color: red;*/
+}
+
+.btn-full,
+.btn-green,
+.bar-outer .bar,
+#header .opener .num,
+.email-form .btn:hover,
+.filter-widget .btn-filter:hover,
+.cart-block .coupon-form .btn:hover,
+.search-popup .search-close:hover span,
+.main-bg-color {
+  background-color: #2ecc71;
+  /*background-color: red;*/
+}
+
+.btn-full,
+.btn-green,
+.blog-detail blockquote,
+.shop-pagination .active a,
+.filter-widget .btn-filter:hover,
+.main-border-color {
+  border-color: #2ecc71;
+  /*border-color: red;*/
+}
