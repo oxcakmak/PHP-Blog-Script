@@ -14,9 +14,9 @@ Bir çok kişi bu tip kurulumları bilmesine rağmen bu tip özel yazılımlarda
     -   953. satırda bulunan “**REPLACE_ME_GOOGLE_CAPTCHA**” data-sitekey bölümüne google recaptcha'dan aldığınız sitenizin keyini ekleyin.
     -   962/63/72. satırlarda bulunan açıklama “**//**” satırının sembollerini kaldırın.
 -   config.php dosyasını açın
-    -   36. satırda bulunan veritabanı bağlantısını
-    -   48. satırda site adresini
-    -   56. satırda sabitlemeyi kendinize göre ayarlayın
+    -   Veritabanı bağlantısını (36 Nolu satır)
+    -   Site adresi (48 Nolu satır)
+    -   Sabitlemeyi kendinize göre ayarlayın (56 Nolu satır)
 -   robots.txt ve cron.php dosyasını da açın ve siteyi kendi alan adınız ile değiştirin.
 
 ### English:
