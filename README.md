@@ -19,7 +19,19 @@ Bir çok kişi bu tip kurulumları bilmesine rağmen bu tip özel yazılımlarda
     -   56. satırda sabitlemeyi kendinize göre ayarlayın
 -   robots.txt ve cron.php dosyasını da açın ve siteyi kendi alan adınız ile değiştirin.
 
-Daha sonra kullanıma başlayabilirsiniz. Yazılımdan ekran görüntüleri:
+### English:
+-   extract the downloaded zip file to a folder
+-   create database and import sql file (username and password: admin admin )
+-   open the admin.php file
+     -   Add the key of your site that you got from google recaptcha to the “**REPLACE_ME_GOOGLE_CAPTCHA**” data-sitekey section on line 953.
+     -   962/63/72. Remove the symbols of the comment “**//**” line in the lines.
+-   open config.php file
+     -   Database link on line 36
+     -   Site address on line 48
+     -   Adjust the fixing on line 56 according to you
+-   Open the robots.txt and cron.php file as well and replace the site with your own domain name.
+
+Daha sonra kullanıma başlayabilirsiniz. Ekran görüntüleri / Screenshots:
 
 ![](https://oxcakmak.com/assets/uploads/20230311/a5c7e60ad3a9dd5f28e7a6f2179d40168998ace6.jpg)
 -
@@ -36,15 +48,3 @@ Daha sonra kullanıma başlayabilirsiniz. Yazılımdan ekran görüntüleri:
 ![](https://oxcakmak.com/assets/uploads/20230311/3b6ebf191240feedcccee8a9bbd85d0cbbac3511.jpg)
 -
 ![](https://oxcakmak.com/assets/uploads/20230311/b0cd1d660484e82fde755fa37b701d598fe0d74a.jpg)
-
-### English:
--   extract the downloaded zip file to a folder
--   create database and import sql file (username and password: admin admin )
--   open the admin.php file
-     -   Add the key of your site that you got from google recaptcha to the “**REPLACE_ME_GOOGLE_CAPTCHA**” data-sitekey section on line 953.
-     -   962/63/72. Remove the symbols of the comment “**//**” line in the lines.
--   open config.php file
-     -   Database link on line 36
-     -   Site address on line 48
-     -   Adjust the fixing on line 56 according to you
--   Open the robots.txt and cron.php file as well and replace the site with your own domain name.
